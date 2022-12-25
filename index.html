@@ -16,92 +16,368 @@
             height: 74.25rem;
             width: 52.5rem;
             color: white;
+            display: flex;
+            flex-direction: row;
         }
 
         #bottom {
-            display: flex;
-            flex-direction: row;
             width: 100%;
         }
 
         #MenuImage {
-            width: 50%;
+            width: 100%;
         }
 
-        .leftMenu {
+        .leftMenu,
+        .rightMenu {
             width: 50%;
             text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .rightMenu{
+            padding: 1rem 1rem 3rem 0;
         }
 
         .menuContainer {
-            padding: 1rem;
+            padding: 0 2rem;
+        }
+
+        .menuList {
+            padding: 0 2rem;
         }
 
         .menuTitle {
             font-size: 2rem;
-            padding: 0 0 0.4rem 0;
+            padding: 1rem 2rem
         }
 
         .menuItem {
-            font-size: 1rem;
+            padding: 0 3rem;
+            font-size: 1.15rem;
             display: flex;
             flex-direction: row;
             justify-content: space-between;
-            line-height: 1.8rem;
+            line-height: 2rem;
+        }
+
+        .lastMenuItem {
+            padding-bottom: 3rem;
         }
     </style>
 </head>
 
-<body style="display: flex; flex-direction: row;">
+<body>
     <div id="main">
-        <div id="middle">
-            <div class="leftMenu">
-                <div class="menuContainer">
-                    <div id="anekaAyam">
-                        <div class="menuTitle">
-                            Aneka Ayam
-                        </div>
-                        <div class="menuItem">
-                            <div class="menuItemName">
-                                Ayam Goreng Mentega
-                            </div>
-                            <div class="menuItemPrice">
-                                Rp 25.000
-                            </div>
-                        </div>
-                        <div class="menuItem">
-                            <div class="menuItemName">
-                                Ayam Goreng Kuluyuk
-                            </div>
-                            <div class="menuItemPrice">
-                                Rp 25.000
-                            </div>
-                        </div>
-                        <div class="menuItem">
-                            <div class="menuItemName">
-                                Ayam Goreng Kungpao
-                            </div>
-                            <div class="menuItemPrice">
-                                Rp 25.000
-                            </div>
-                        </div>
-                        <div class="menuItem">
-                            <div class="menuItemName">
-                                Ayam Rica-Rica
-                            </div>
-                            <div class="menuItemPrice">
-                                Rp 25.000
-                            </div>
-                        </div>
+        <div class="leftMenu">
+            <img id="MenuImage" src="./Image/Menu Image.png">
+            <div class="menuTitle">
+                Aneka Ayam
+            </div>
+            <div class="menuItem">
+                <div class="menuItemName">
+                    Ayam Goreng Mentega
+                </div>
+                <div class="menuItemPrice">
+                    Rp 25.000
+                </div>
+            </div>
+            <div class="menuItem">
+                <div class="menuItemName">
+                    Ayam Goreng Kuluyuk
+                </div>
+                <div class="menuItemPrice">
+                    Rp 25.000
+                </div>
+            </div>
+            <div class="menuItem">
+                <div class="menuItemName">
+                    Ayam Goreng Kungpao
+                </div>
+                <div class="menuItemPrice">
+                    Rp 25.000
+                </div>
+            </div>
+            <div class="menuItem">
+                <div class="menuItemName">
+                    Ayam Rica-Rica
+                </div>
+                <div class="menuItemPrice">
+                    Rp 25.000
+                </div>
+            </div>
+            <div class="menuTitle">
+                Seafood
+            </div>
+            <div class="doubleMenuItem">
+                <div class="menuItem">
+                    <div class="menuItemName">
+                        Cumi / Udang
+                    </div>
+                </div>
+                <div class="menuItem">
+                    <div class="menuItemName">
+                        Goreng Tepung
+                    </div>
+                    <div class="menuItemPrice">
+                        Rp 25.000
                     </div>
                 </div>
             </div>
-            <div class="rightMenu">
-
+            <div class="doubleMenuItem">
+                <div class="menuItem">
+                    <div class="menuItemName">
+                        Cumi / Udang
+                    </div>
+                </div>
+                <div class="menuItem">
+                    <div class="menuItemName">
+                        Goreng Mentega
+                    </div>
+                    <div class="menuItemPrice">
+                        Rp 25.000
+                    </div>
+                </div>
+            </div>
+            <div class="menuTitle">
+                Aneka Mie
+            </div>
+            <div class="doubleMenuItem">
+                <div class="menuItem">
+                    <div class="menuItemName">
+                        Mie / Kwetiau
+                    </div>
+                </div>
+                <div class="menuItem">
+                    <div class="menuItemName">
+                        Goreng Ayam
+                    </div>
+                    <div class="menuItemPrice">
+                        Rp 25.000
+                    </div>
+                </div>
+            </div>
+            <div class="doubleMenuItem">
+                <div class="menuItem">
+                    <div class="menuItemName">
+                        Mie / Kwetiau
+                    </div>
+                </div>
+                <div class="menuItem">
+                    <div class="menuItemName">
+                        Goreng Seafood
+                    </div>
+                    <div class="menuItemPrice">
+                        Rp 25.000
+                    </div>
+                </div>
+            </div>
+            <div class="menuItem lastMenuItem">
+                <div class="menuItemName">
+                    Mie Ayam Bakso
+                </div>
+                <div class="menuItemPrice">
+                    Rp 25.000
+                </div>
             </div>
         </div>
-        <div id="bottom">
-            <img id="MenuImage" src="./Image/Menu Image.png">
+        <div class="rightMenu">
+            <div class="menuTitle">
+                Rice Bowl
+            </div>
+            <div class="doubleMenuItem">
+                <div class="menuItem">
+                    <div class="menuItemName">
+                        Ayam / Ikan Dori
+                    </div>
+                </div>
+                <div class="menuItem">
+                    <div class="menuItemName">
+                        Rica - Rica
+                    </div>
+                    <div class="menuItemPrice">
+                        Rp 20.000
+                    </div>
+                </div>
+            </div>
+            <div class="doubleMenuItem">
+                <div class="menuItem">
+                    <div class="menuItemName">
+                        Ayam / Ikan Dori
+                    </div>
+                </div>
+                <div class="menuItem">
+                    <div class="menuItemName">
+                        Goreng Mentega
+                    </div>
+                    <div class="menuItemPrice">
+                        Rp 20.000
+                    </div>
+                </div>
+            </div>
+            <div class="doubleMenuItem">
+                <div class="menuItem">
+                    <div class="menuItemName">
+                        Ayam / Ikan Dori
+                    </div>
+                </div>
+                <div class="menuItem">
+                    <div class="menuItemName">
+                        Kung Pao
+                    </div>
+                    <div class="menuItemPrice">
+                        Rp 20.000
+                    </div>
+                </div>
+            </div>
+            <div class="doubleMenuItem">
+                <div class="menuItem">
+                    <div class="menuItemName">
+                        Ayam / Ikan Dori
+                    </div>
+                </div>
+                <div class="menuItem">
+                    <div class="menuItemName">
+                        Thai Sauce
+                    </div>
+                    <div class="menuItemPrice">
+                        Rp 20.000
+                    </div>
+                </div>
+            </div>
+            <div class="menuItem">
+                <div class="menuItemName">
+                    Beef Bulgogi
+                </div>
+                <div class="menuItemPrice">
+                    Rp 25.000
+                </div>
+            </div>
+            <div class="menuTitle">
+                Hidangan TASA
+            </div>
+            <div class="menuItem">
+                <div class="menuItemName">
+                    Nasi Goreng
+                </div>
+                <div class="menuItemPrice">
+                    Rp 20.000
+                </div>
+            </div>
+            <div class="menuItem">
+                <div class="menuItemName">
+                    Nasi Goreng Spesial
+                </div>
+                <div class="menuItemPrice">
+                    Rp 25.000
+                </div>
+            </div>
+            <div class="menuItem">
+                <div class="menuItemName">
+                    Burger
+                </div>
+                <div class="menuItemPrice">
+                    Rp 15.000
+                </div>
+            </div>
+            <div class="menuItem">
+                <div class="menuItemName">
+                    Burger TASA
+                </div>
+                <div class="menuItemPrice">
+                    Rp 25.000
+                </div>
+            </div>
+            <div class="menuItem">
+                <div class="menuItemName">
+                    French Fries
+                </div>
+                <div class="menuItemPrice">
+                    Rp 12.000
+                </div>
+            </div>
+            <div class="menuItem">
+                <div class="menuItemName">
+                    Hot Dog
+                </div>
+                <div class="menuItemPrice">
+                    Rp 15.000
+                </div>
+            </div>
+            <div class="menuItem">
+                <div class="menuItemName">
+                    Sosis
+                </div>
+                <div class="menuItemPrice">
+                    Rp 13.000
+                </div>
+            </div>
+            <div class="menuItem">
+                <div class="menuItemName">
+                    Capcay Goreng
+                </div>
+                <div class="menuItemPrice">
+                    Rp 25.000
+                </div>
+            </div>
+            <div class="menuItem">
+                <div class="menuItemName">
+                    Capcay Kuah
+                </div>
+                <div class="menuItemPrice">
+                    Rp 25.000
+                </div>
+            </div>
+            <div class="menuItem">
+                <div class="menuItemName">
+                    Puyung Hai
+                </div>
+                <div class="menuItemPrice">
+                    Rp 25.000
+                </div>
+            </div>
+            <div class="menuItem">
+                <div class="menuItemName">
+                    Pop Mie
+                </div>
+                <div class="menuItemPrice">
+                    Rp 10.000
+                </div>
+            </div>
+            <div class="menuItem">
+                <div class="menuItemName">
+                    Indomie Rebus
+                </div>
+                <div class="menuItemPrice">
+                    Rp 10.000
+                </div>
+            </div>
+            <div class="menuItem">
+                <div class="menuItemName">
+                    Indomie Goreng
+                </div>
+                <div class="menuItemPrice">
+                    Rp 10.000
+                </div>
+            </div>
+            <div class="menuItem">
+                <div class="menuItemName">
+                    Nasi
+                </div>
+                <div class="menuItemPrice">
+                    Rp 5.000
+                </div>
+            </div>
+            <div class="menuItem">
+                <div class="menuItemName">
+                    + Topping : Telur
+                </div>
+                <div class="menuItemPrice">
+                    Rp 5.000
+                </div>
+            </div>
         </div>
     </div>
 </body>
